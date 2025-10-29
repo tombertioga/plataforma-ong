@@ -1,78 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cadastro de Voluntários</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<header>
-<img src="../imagens/logo.jpg" alt="Logo da ONG" width="120">
-<nav>
-<ul>
-<li><a href="../index/index.html">Início</a></li>
-<li><a href="../projetos/projetos.html">Projetos</a></li>
-<li><a href="../cadastro/cadastro.html">Cadastro</a></li>
-</ul>
-</nav>
-</header>
+<div class="container">
+    <header class="header">
+        <img src="../imagens/logo.jpg" alt="Logo da ONG" width="120">
+<button class="menu-toggle" aria-controls="main-navbar" aria-expanded="false">
+    <span>☰</span>
+</button>
+    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index/index.html">Início</a></li>
+                <li><a href="../projetos/projetos.html">Projetos</a></li>
+                <li><a href="../cadastro/cadastro.html" class="active">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
-<main>
-<section>
-<h1>Cadastro de Voluntários</h1>
-<form>
-<fieldset>
-<legend>Dados Pessoais</legend>
-<label for="nome">Nome completo:</label>
-<input type="text" id="nome" name="nome" required><br>
+    <main class="main-content">
+        <section>
+            <h1 class="section-title" style="text-align: center;">Cadastro de Voluntários</h1>
+            <p class="section-subtitle" style="margin-bottom: var(--space-5);">Preencha o formulário e faça parte da nossa rede de solidariedade.</p>
+            
+            <form class="card" style="max-width: 600px; margin: 0 auto; padding: var(--space-5);">
+                <fieldset>
+                    <legend style="font-weight: bold; margin-bottom: var(--space-3);">Dados Pessoais</legend>
+
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required style="margin-bottom: var(--space-2);">
+                    <div class="form-error"></div>
+
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required style="margin-bottom: var(--space-2);">
+                    <div class="form-error"></div>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(00) 00000-0000" required style="margin-bottom: var(--space-2);">
+                    <div class="form-error"></div>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required style="margin-bottom: var(--space-2);">
+                    <div class="form-error"></div>
+
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required style="margin-bottom: var(--space-2);">
+                    <div class="form-error"></div>
+
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required style="margin-bottom: var(--space-3);">
+                        <option value="">Selecione...</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="BA">Bahia</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </select>
+                </fieldset>
 
 
-<label for="cpf">CPF:</label>
-<input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required><br>
+                <fieldset style="margin-top: var(--space-4);">
+                    <legend style="font-weight: bold; margin-bottom: var(--space-3);">Áreas de Interesse</legend>
+                    <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                        <label><input type="checkbox" name="area" value="educacao"> Educação</label>
+                        <label><input type="checkbox" name="area" value="saude"> Saúde</label>
+                        <label><input type="checkbox" name="area" value="meioambiente"> Meio Ambiente</label>
+                    </div>
+                </fieldset>
 
 
-<label for="telefone">Telefone:</label>
-<input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(00) 00000-0000" required><br>
+                <input type="submit" value="Enviar Cadastro" class="btn btn-primary btn-large" style="margin-top: var(--space-5); width: 100%;">
+            </form>
+        </section>
+    </main>
 
 
-<label for="email">E-mail:</label>
-<input type="email" id="email" name="email" required><br>
-
-
-<label for="cep">CEP:</label>
-<input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" required><br>
-
-
-<label for="estado">Estado:</label>
-<select id="estado" name="estado" required>
-<option value="">Selecione...</option>
-<option value="SP">São Paulo</option>
-<option value="RJ">Rio de Janeiro</option>
-<option value="MG">Minas Gerais</option>
-<option value="BA">Bahia</option>
-<option value="RS">Rio Grande do Sul</option>
-</select><br>
-</fieldset>
-
-
-<fieldset>
-<legend>Áreas de Interesse</legend>
-<label><input type="checkbox" name="area" value="educacao"> Educação</label>
-<label><input type="checkbox" name="area" value="saude"> Saúde</label>
-<label><input type="checkbox" name="area" value="meioambiente"> Meio Ambiente</label>
-</fieldset>
-
-
-<input type="submit" value="Enviar">
-</form>
-</section>
-</main>
-
-
-<footer>
-<p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
-</footer>
+    <footer class="footer">
+        <p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
+    </footer>
+</div>
+<script src="../js/scripts.js"></script>
 </body>
 </html>

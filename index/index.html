@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plataforma ONG - Início</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma ONG - Início</title>
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<header>
-<img src="../imagens/logo.jpg" alt="Logo da ONG" width="120">
-<nav>
-<ul>
-<li><a href="../index/index.html">Início</a></li>
-<li><a href="../projetos/projetos.html">Projetos</a></li>
-<li><a href="../cadastro/cadastro.html">Cadastro</a></li>
-</ul>
-</nav>
-</header>
+  <div class="container">
+    <header class="header">
+      <img src="../imagens/logo.jpg" alt="Logo da ONG" width="120">
+      <button class="menu-toggle" aria-controls="main-navbar" aria-expanded="false">
+        <span>☰</span>
+      </button>
+      <nav class="navbar" id="main-navbar">
+        <ul>
+          <li><a href="../index/index.html" class="active">Início</a></li>
+          <li><a href="../projetos/projetos.html">Projetos</a></li>
+          <li><a href="../cadastro/cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
 
+    <main class="main-content">
+      <section class="cta-section">
+        <h1>Transformando Vidas Juntos</h1>
+        <p>Sua solidariedade e ação são o motor da nossa missão. Junte-se a nós!</p>
+        <img src="../imagens/voluntarios.jpg" alt="Voluntários da ONG" class="hero-image">
+        <div class="hero-actions">
+          <a href="../cadastro/cadastro.html" class="btn btn-primary">Seja um Voluntário</a>
+          <a href="../projetos/projetos.html" class="btn btn-secondary">Conhecer Projetos</a>
+        </div>
+      </section>
+    </main>
 
-<main>
-<section>
-<h1>Bem-vindo à Nossa ONG</h1>
-<p>Transformando vidas por meio da solidariedade e ação social. Junte-se a nós!</p>
-<img src="../imagens/voluntarios.jpg" alt="Voluntários da ONG" width="400">
-</section>
-</main>
-
-
-<footer>
-<p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
-</footer>
+    <footer class="footer">
+      <p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
+    </footer>
+  </div>
+  <script src="../js/scripts.js"></script>
 </body>
 </html>

@@ -1,38 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projetos - Plataforma ONG</title>
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Plataforma ONG</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<header>
-<img src="../imagens/logo.jpg" alt="Logo da ONG" width="120">
-<nav>
-<ul>
-<li><a href="../index/index.html">Início</a></li>
-<li><a href="../projetos/projetos.html">Projetos</a></li>
-<li><a href="../cadastro/cadastro.html">Cadastro</a></li>
-</ul>
-</nav>
-</header>
+<div class="container">
+    <header class="header">
+        <img src="../imagens/logo.jpg" alt="Logo da ONG" width="120">
+<button class="menu-toggle" aria-controls="main-navbar" aria-expanded="false">
+    <span>☰</span>
+</button>
+    </nav>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index/index.html">Início</a></li>
+                <li><a href="../projetos/projetos.html" class="active">Projetos</a></li>
+                <li><a href="../cadastro/cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="main-content">
+        <section>
+            <h1 class="section-title">Nossos Projetos</h1>
+            <p class="section-subtitle">Conheça as iniciativas que transformam vidas e como você pode fazer parte.</p>
+            
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-4); margin-top: var(--space-6);">
 
-<main>
-<section>
-<h1>Nossos Projetos</h1>
-<article>
-<h2>Projeto Esperança</h2>
-<img src="../imagens/projetos.jpg" alt="Imagem do Projeto Esperança" width="300">
-<p>O Projeto Esperança oferece apoio educacional a crianças em situação de vulnerabilidade.</p>
-</article>
-</section>
-</main>
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="../imagens/projetos.jpg" alt="Imagem do Projeto Esperança" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    
+                    <div style="padding: var(--space-3);">
+                        <div class="card-header">
+                            <h2>Projeto Esperança</h2>
+                            <span class="badge badge-success">Ativo</span>
+                        </div>
+                        
+                        <p>O Projeto Esperança oferece apoio educacional a crianças em situação de vulnerabilidade.</p>
+                        
+                        <div class="project-details" style="margin: var(--space-3) 0;">
+                            <div class="project-stat">
+                                <strong>150+</strong>
+                                <span>Crianças Apoiadas</span>
+                            </div>
+                            <div class="project-stat">
+                                <strong>30</strong>
+                                <span>Voluntários</span>
+                            </div>
+                            <div class="project-stat">
+                                <strong>4</strong>
+                                <span>Anos</span>
+                            </div>
+                        </div>
 
+                        <div class="card-actions">
+                            <a href="#" class="btn btn-primary">Ver Detalhes</a>
+                            <a href="../cadastro/cadastro.html" class="btn btn-secondary">Quero Ajudar</a>
+                        </div>
+                    </div>
+                </article>
+                
+                </div>
+            </section>
+    </main>
 
-<footer>
-<p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
-</footer>
+    <footer class="footer">
+        <p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
+    </footer>
+</div>
+<script src="../js/scripts.js"></script>
 </body>
 </html>
